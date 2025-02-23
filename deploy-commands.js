@@ -4,7 +4,8 @@ const { REST, Routes, SlashCommandBuilder } = require('discord.js');
 const commands = [
   new SlashCommandBuilder().setName('combat').setDescription("Lance un combat (ADMIN seulement)"),
   new SlashCommandBuilder().setName('inscription').setDescription("S'inscrire au combat en cours"),
-  new SlashCommandBuilder().setName('classement').setDescription("Affiche le classement des joueurs")
+  new SlashCommandBuilder().setName('classement').setDescription("Affiche le classement des joueurs"),
+  new SlashCommandBuilder().setName('info').setDescription("Affiche vos stats : badges, ratio victoires/défaites et participations")
 ].map(command => command.toJSON());
 
 const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
